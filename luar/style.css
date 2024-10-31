@@ -1,0 +1,651 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    color: #e50914;
+    
+    animation: fadeIn 1s ease-in-out;
+}
+
+.logo h1 img {
+    width: 3rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e50914;
+    animation: bounce 0.5s;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* Sembunyikan tombol hamburger di layar bsr */
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Sembunyikan tombol hamburger di layar bsr */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; /* Sembunyikan tombol hamburger di layar bsr */
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('hero-background.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px; /* Offset for fixed header */
+    animation: slideUp 1.5s ease-in-out;
+}
+.hero-text img{
+    height: 7rem;
+    margin-bottom: 2pc;
+}
+.hero-text h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-text span {
+    color: #e50914;
+    font-weight: bold;
+}
+
+.hero-text .explore-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    animation: pulse 2s infinite;
+}
+
+.explore-btn:hover {
+    background-color: #f40612;
+}
+
+/* Showcase Section */
+.showcase {
+    padding: 60px 50px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.showcase h3 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.movie:hover img {
+    transform: scale(1.05);
+}
+
+.movie h4 {
+    text-align: center;
+    margin-top: 10px;
+    animation: fadeInUp 1.5s;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 60px 50px;
+    background-color: #1f1f1f;
+}
+
+.about-us h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-us-text {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-us-team {
+    max-width: 1200px;
+}
+
+.about-us-team h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.team-member img:hover {
+    transform: scale(1.05);
+}
+
+.team-member h4 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    margin-top: auto;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode header {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.dark-mode .hero {
+    background: url('hero-background-dark.jpg') center/cover no-repeat;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 100;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 60px 50px;
+    background-color: #1f1f1f;
+}
+
+.gallery h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #e50914;
+    margin-top: 5rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    text-align: center;
+    background-color: #2b2b2b;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 3px solid #e50914;
+}
+.gallery h2 {
+    padding-top: 20px;
+}
+
+.gallery-item h4 {
+    padding: 10px;
+    margin: 0;
+    color: #e0e0e0;
+    font-size: 18px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles for Gallery */
+@media only screen and (max-width: 768px) {
+    .gallery h2 {
+        font-size: 28px;
+    }
+
+    .gallery-item h4 {
+        font-size: 16px;
+    }
+}
+
+/* Tombol Explore Now */
+.explore-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.explore-btn:hover {
+    background-color: #0056b3;
+}
+
+.explore-btn:active {
+    transform: scale(0.95);
+    background-color: #004494;
+}
+
+/* Animasi klik tombol */
+@keyframes clickEffect {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* Kelas animasi klik tombol */
+.animate-click {
+    animation: clickEffect 0.2s ease-out;
+}
+
+/* Efek klik */
+@keyframes clickEffect {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+/* Main content styling for Members page */
+section.members {
+    padding: 4.5rem;
+    background: #1f1f1f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 2rem;
+}
+
+.members h2 {
+    color: #e50914;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.member-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tab-button {
+    background: #e50914;
+    border: none;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 1rem;
+}
+
+.tab-button:hover {
+    background: #b00710;
+    transform: scale(1.05);
+}
+
+.class-members {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.class-members.show {
+    display: block;
+    opacity: 1;
+}
+
+.class-members h3 {
+    color: #e50914;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    padding-top: 20px;
+}
+
+.class-members ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.class-members li {
+        background: #3d3b3b;
+        margin: 0.5rem 0;
+        padding: 0.75rem;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s, transform 0.3s;
+        cursor: pointer;
+        color: #ffffff;
+}
+
+.class-members li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+}
+
+.class-members li:hover {
+    background: #e50914;
+    transform: translateY(-3px);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #212121;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Profile Page */
+.profile {
+    padding: 2rem;
+    background: #1f1f1f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    margin-top: 15rem;
+}
+
+.profile h2 {
+    color: #e50914;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.profile-content {
+    text-align: center;
+}
+
+.profile-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.profile-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.profile-content p {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+button.btn-back {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+/* Contact Section */
+.contact {
+    padding: 60px 50px;
+    background-color: #1f1f1f;
+    color: #fff;
+    margin-top: 10rem;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 16px;
+}
+
+.contact-item a {
+    color: #e50914;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .contact-details {
+        padding: 0 20px;
+    }
+
+    .contact-item {
+        margin-bottom: 15px;
+    }
+}
+
+
+/* Responsive design for Members page */
+@media (max-width: 768px) {
+    .member-tabs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tab-button {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .member-content {
+        padding: 1rem;
+    }
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .hero-text h2 {
+        font-size: 36px;
+    }
+    
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.tab-button.active {
+    background: #b00710; /* Warna latar belakang untuk tab aktif */
+    color: #fff; /* Warna teks untuk tab aktif */
+}

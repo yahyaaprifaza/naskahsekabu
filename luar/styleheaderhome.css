@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+    nav {
+        display: none; 
+        position: absolute;
+        top: 135px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        z-index: 99; 
+    }
+
+    nav.active {
+        display: block; 
+    }
+
+    .hamburger {
+        display: block; 
+    }
+
+    nav ul {
+        flex-direction: column; 
+        padding: 20px;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

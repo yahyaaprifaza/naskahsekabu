@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profile page for individual students in NASKAH.">
+    <meta name="keywords" content="NASKAH, Student Profile, Member">
+    <meta name="author" content="NASKAH Team">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="../../../luar/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><img src="../../../logo/logo.png" alt="Naskah"></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../../luar/index.html">Home</a></li>
+                <li><a href="../../../luar/about.html">About Us</a></li>
+                <li><a href="../../../luar/gallery.html">Gallery</a></li>
+                
+                <li><a href="../../../luar/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="../../../luar/members.html"><button class="btn-back">Back</button></a>
+    </header>
+ 
+    <section class="profile">
+       
+        <h2>Profile</h2>
+        <div class="profile-content">
+            <img src="./silvia.jpg" alt="Profile Picture">
+            <h3 id="student-name">Silvia Devi</h3>
+            <p id="student-info">
+                <p>Jombang, 01 Agustus 2007</p>
+                <p>Jombang</p>
+                <p>@pipaaaayyyyyy</p>
+                <p>"no one look good with me, but you…"</p>
+            </p>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>© 2024 NASKAH. All rights reserved.</p>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const studentId = params.get('student');
+        
+            // Ganti dengan data siswa yang sesuai berdasarkan `studentId`
+            const studentData = {
+                1: {
+                    name: 'Student 1',
+                    info: 'Information about Student 1.',
+                    profilePic: 'student1-pic.jpg'
+                }
+                // Tambahkan data siswa lainnya di sini
+            };
+        
+            if (studentData[studentId]) {
+                const student = studentData[studentId];
+                document.getElementById('student-name').textContent = student.name;
+                document.getElementById('student-info').textContent = student.info;
+                document.querySelector('.profile-content img').src = student.profilePic;
+            }
+        });
+        </script>
+        
+</body>
+</html>
