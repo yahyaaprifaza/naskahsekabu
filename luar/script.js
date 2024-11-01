@@ -61,11 +61,6 @@ document.querySelectorAll('.explore-btn').forEach(button => {
     });
 });
 
-// Dark Mode Toggle
-const toggleDarkMode = document.querySelector('#dark-mode-toggle');
-toggleDarkMode.addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode');
-});
 
 // Scroll to Top Button
 const scrollToTopBtn = document.createElement('button');
