@@ -88,7 +88,7 @@ nav ul li a:hover {
     border-radius: 12rem; 
     font-weight: 600;
     font-size: 18px;
-   padding: 18px 32px; 
+    padding: 18px 32px; 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -179,7 +179,7 @@ nav ul li a:hover {
 
 /* CAS - HOME */
 .showcase {
-    padding: 60px 50px;
+    padding:50px 50px;
     animation: fadeIn 2s ease-in-out;
 }
 
