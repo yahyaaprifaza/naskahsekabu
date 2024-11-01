@@ -173,8 +173,22 @@ nav ul li a:hover {
     animation: pulse 2s infinite;
 }
 
-.explore-btn:hover {
-    background-color: #f40612;
+/*css video popup, */
+#vidpopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Awalnya disembunyikan */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+video {
+    max-width: 90%;
+    max-height: 90%;
 }
 
 /* CAS - HOME */

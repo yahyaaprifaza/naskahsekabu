@@ -12,6 +12,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -55,19 +56,35 @@
         <h3>Catatan Akhir Sekolah</h3>
         <div class="movie-grid">
             <div class="movie">
-                <img src="../thumbnail-home/thumb-cas.png" alt="Poster acara Event 1 yang menampilkan tanggal dan detail acara" loading="lazy">
-                <h4>Eps.1</h4>
+                <a href="#video1" onclick="showVideo('video1')">
+                    <img src="../thumbnail-home/thumb-cas.png" alt="cas eps.1" loading="lazy">
+                    <h4>Eps.1</h4>
+                </a>
             </div>
             <div class="movie">
-                <img src="../thumbnail-home/thumb-cas.png" alt="Poster acara Event 2 yang menampilkan tanggal dan detail acara" loading="lazy">
-                <h4>Eps.2</h4>
+                <a href="#video2" onclick="showVideo('video2')">
+                    <img src="../thumbnail-home/thumb-cas.png" alt="cas eps.2" loading="lazy">
+                    <h4>Eps.2</h4>
+                </a>
             </div>
             <div class="movie">
-                <img src="../thumbnail-home/thumb-cas.png" alt="Poster acara Event 3 yang menampilkan tanggal dan detail acara" loading="lazy">
-                <h4>Eps.3</h4>
+                <a href="#video3" onclick="showVideo('video3')">
+                    <img src="../thumbnail-home/thumb-cas.png" alt="cas eps.3" loading="lazy">
+                    <h4>Eps.3</h4>
+                </a>
             </div>
         </div>
     </section>
+    
+    <!-- Video Popup -->
+    <div id="vidpopup">
+        <span onclick="closeVideo()" style="cursor:pointer;">&times; Close</span>
+        <video id="videoPlayer" controls>
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
 
     <footer>
         <p>© 2024 NASKAH. All rights reserved.</p>
@@ -75,6 +92,7 @@
 
     <script src="./script.js"></script>
     <script src="./tombolhamburger.js"></script>
+    <script src="./videocas.js"></script>
 </body>
 
 </html>

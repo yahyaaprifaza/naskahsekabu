@@ -61,12 +61,6 @@ document.querySelectorAll('.explore-btn').forEach(button => {
     });
 });
 
-// Dark Mode Toggle
-const toggleDarkMode = document.querySelector('#dark-mode-toggle');
-toggleDarkMode.addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode');
-});
-
 // Scroll to Top Button
 const scrollToTopBtn = document.createElement('button');
 scrollToTopBtn.textContent = '↑';
@@ -161,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Cek fragment identifier saat halaman dimuat
     const hash = window.location.hash;
     if (hash) {
-        const classId = hash.substring(1); // Hapus '#' dari hash
+        const classId = hash.substring(1);
         showTab(classId);
     } else {
         // Tampilkan tab pertama jika tidak ada hash

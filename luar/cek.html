@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Modal Example</title>
+    <style>
+        #vidpopup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none; /* Awalnya disembunyikan */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        video {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+</head>
+<body>
+
+<section class="showcase" id="mainContent">
+    <h3>Catatan Akhir Sekolah</h3>
+    <div class="movie-grid">
+        <div class="movie">
+            <a href="#video1" onclick="showVideo('video1')">
+                <img src="../thumbnail-home/thumb-cas.png" alt="cas eps.1" loading="lazy">
+                <h4>Eps.1</h4>
+            </a>
+        </div>
+        <div class="movie">
+            <a href="#video2" onclick="showVideo('video2')">
+                <img src="../thumbnail-home/thumb-cas.png" alt="cas eps.2" loading="lazy">
+                <h4>Eps.2</h4>
+            </a>
+        </div>
+        <div class="movie">
+            <a href="#video3" onclick="showVideo('video3')">
+                <img src="../thumbnail-home/thumb-cas.png" alt="cas eps.3" loading="lazy">
+                <h4>Eps.3</h4>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Video Popup -->
+<div id="vidpopup">
+    <span onclick="closeVideo()" style="cursor:pointer;">&times; Close</span>
+    <video id="videoPlayer" controls>
+        <source id="videoSource" src="" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<script>
+function showVideo(videoId) {
+    const videoModal = document.getElementById('vidpopup');
+    const videoPlayer = document.getElementById('videoPlayer');
+    const videoSource = document.getElementById('videoSource');
+
+    // Set video source berdasarkan episode
+    if (videoId === 'video1') {
+        videoSource.src = '../thumbnail-home/vid-cas.mp4'; // Ganti dengan URL video yang sesuai
+    } else if (videoId === 'video2') {
+        videoSource.src = '../thumbnail-home/vid-cas.mp4'; // Ganti dengan URL video yang sesuai
+    } else if (videoId === 'video3') {
+        videoSource.src = '../thumbnail-home/vid-cas.mp4'; // Ganti dengan URL video yang sesuai
+    }
+
+    videoPlayer.load(); // Load video baru
+    videoModal.style.display = 'flex'; // Tampilkan modal video
+}
+
+function closeVideo() {
+    const videoModal = document.getElementById('vidpopup');
+    const videoPlayer = document.getElementById('videoPlayer');
+    videoModal.style.display = 'none'; // Sembunyikan modal video
+    videoPlayer.pause(); // Hentikan video
+    videoPlayer.src = ''; // Reset sumber video
+}
+</script>
+
+</body>
+</html>
