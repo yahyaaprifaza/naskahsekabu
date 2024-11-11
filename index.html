@@ -13,13 +13,64 @@
     <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
 </head>
 
+<style>
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.65);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .popup {
+        background-color: #141414; 
+        color: white;
+        width: 300px;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .popup input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 4px;
+        background-color: #333;
+        color: white;
+    }
+
+    .popup button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #e50914;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .popup button:hover {
+        background-color: #b50710; 
+    }
+</style>
+
 <body>
     <header>
         <div class="logo">
             <h1 style="font-family: 'Bebas Neue'; font-size: 3rem;">NASKAH</h1>
         </div>
         <div class="hamburger" id="hamburger">
-            &#9776; <!-- tombol hamburger -->
+            &#9776; 
         </div>
         <nav id="nav-menu">  
             <ul>  
@@ -94,5 +145,6 @@
     <script src="./tombolhamburger.js"></script>
     <script src="./videocas.js"></script>
     <script src="./antimaling.js"></script>
+    <script src="./pw.js"></script>
 </body>
 </html>
