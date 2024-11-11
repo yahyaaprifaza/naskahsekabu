@@ -30,19 +30,19 @@
     <div class="movie-grid">
         <div class="movie">
             <a href="#video1" onclick="showVideo('video1')">
-                <img src="../thumbnail-home/thumb-cas.png" alt="cas eps.1" loading="lazy">
+                <img src="./thumbnail-home/thumb-cas.png" alt="cas eps.1" loading="lazy">
                 <h4>Eps.1</h4>
             </a>
         </div>
         <div class="movie">
             <a href="#video2" onclick="showVideo('video2')">
-                <img src="../thumbnail-home/thumb-cas.png" alt="cas eps.2" loading="lazy">
+                <img src="./thumbnail-home/thumb-cas.png" alt="cas eps.2" loading="lazy">
                 <h4>Eps.2</h4>
             </a>
         </div>
         <div class="movie">
             <a href="#video3" onclick="showVideo('video3')">
-                <img src="../thumbnail-home/thumb-cas.png" alt="cas eps.3" loading="lazy">
+                <img src="./thumbnail-home/thumb-cas.png" alt="cas eps.3" loading="lazy">
                 <h4>Eps.3</h4>
             </a>
         </div>
@@ -66,11 +66,11 @@ function showVideo(videoId) {
 
     // Set video source berdasarkan episode
     if (videoId === 'video1') {
-        videoSource.src = '../thumbnail-home/vid-cas.mp4'; // Ganti dengan URL video yang sesuai
+        videoSource.src = './thumbnail-home/vid-cas.mp4'; // Ganti dengan URL video yang sesuai
     } else if (videoId === 'video2') {
-        videoSource.src = '../thumbnail-home/vid-cas.mp4'; // Ganti dengan URL video yang sesuai
+        videoSource.src = './thumbnail-home/vid-cas.mp4'; // Ganti dengan URL video yang sesuai
     } else if (videoId === 'video3') {
-        videoSource.src = '../thumbnail-home/vid-cas.mp4'; // Ganti dengan URL video yang sesuai
+        videoSource.src = './thumbnail-home/vid-cas.mp4'; // Ganti dengan URL video yang sesuai
     }
 
     videoPlayer.load(); // Load video baru

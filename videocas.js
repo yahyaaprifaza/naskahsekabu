@@ -5,11 +5,11 @@ function showVideo(videoId) {
 
     // setting seuai episode ygy
     if (videoId === 'video1') {
-        videoSource.src = '../thumbnail-home/vid-cas1.mp4'; 
+        videoSource.src = './thumbnail-home/vid-cas1.mp4'; 
     } else if (videoId === 'video2') {
-        videoSource.src = '../thumbnail-home/vid-cas2.mp4';
+        videoSource.src = './thumbnail-home/vid-cas2.mp4';
     } else if (videoId === 'video3') {
-        videoSource.src = '../thumbnail-home/vid-cas3.mp4'; 
+        videoSource.src = './thumbnail-home/vid-cas3.mp4'; 
     }
 
     videoPlayer.load(); 
