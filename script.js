@@ -8,6 +8,17 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Get all menu items
+const menuItems = document.querySelectorAll('.menu-item');
+
+menuItems.forEach(item => {
+    item.addEventListener('click', function() {
+        menuItems.forEach(el => el.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+
+
 // Interactive Button Effects
 document.querySelectorAll('.explore-btn').forEach(button => {
     button.addEventListener('mouseover', function () {
@@ -16,12 +27,6 @@ document.querySelectorAll('.explore-btn').forEach(button => {
     button.addEventListener('mouseout', function () {
         this.style.backgroundColor = '#e50914';
     });
-});
-
-// Dark Mode Toggle
-const toggleDarkMode = document.querySelector('#dark-mode-toggle');
-toggleDarkMode.addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode');
 });
 
 // Scroll to Top Button

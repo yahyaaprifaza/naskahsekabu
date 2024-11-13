@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with the NASKAH team.">
-    <meta name="keywords" content="Contact, NASKAH, Get in Touch">
-    <meta name="author" content="NASKAH Team">
-    <title>NASKAH - Contact Us</title>
-    <link rel="stylesheet" href="../luar/style.css">
-    <link rel="stylesheet" href="./styleheader.css">
+    <title>Kolom Komentar</title>
     <style>
-        /* Gaya untuk kontak */
-        .contact {
-            text-align: center;
-            padding: 20px;
+        /* Mengatur gaya keseluruhan */
+        body {
+            background-color: #141414;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
         }
-        .contact h2 {
-            color: #e50914;
-        }
-        .contact-item {
-            margin: 15px;
-        }
-        /* Gaya form komentar */
+
+        /* Gaya form */
         .comment-form {
             max-width: 400px;
             width: 100%;
@@ -31,9 +28,10 @@
             border-radius: 5px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
+
         .comment-form input,
         .comment-form textarea {
-            width: 100%;
+            width: 93.4%;
             margin: 10px 0;
             padding: 12px;
             background-color: #222;
@@ -41,10 +39,12 @@
             color: #fff;
             border-radius: 3px;
         }
+
         .comment-form input::placeholder,
         .comment-form textarea::placeholder {
             color: #999;
         }
+
         .comment-form button {
             background-color: #e50914;
             color: white;
@@ -57,9 +57,11 @@
             font-size: 16px;
             transition: background-color 0.3s ease;
         }
+
         .comment-form button:hover {
             background-color: #f40612;
         }
+
         /* Gaya daftar komentar */
         .comment-list {
             max-width: 400px;
@@ -70,18 +72,22 @@
             border-radius: 5px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
+
         .comment {
             padding: 10px 0;
             border-bottom: 1px solid #555;
         }
+
         .comment:last-child {
             border-bottom: none;
         }
+
         .comment h4 {
             margin: 0;
             font-size: 16px;
             color: #e5e5e5;
         }
+
         .comment p {
             margin: 5px 0;
             color: #ccc;
@@ -89,82 +95,34 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <h1><img src="./logo/logo.png" alt="Naskah"></h1>
-        </div>
-        <div class="hamburger" id="hamburger">
-            &#9776;
-        </div>
-        <nav id="nav-menu">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About Us</a></li>
-                <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="./members.html">Members</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Konten Utama -->
-    <main>
-        <section class="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or need further information, please reach out to us using the details below.</p>
-            <div class="contact-details">
-                <div class="contact-item">
-                    <h3>Address</h3>
-                    <p>Gadingmangu, Kec. Perak, Kabupaten Jombang, Jawa Timur 61461</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Instagram</h3>
-                    <p><a href="https://www.instagram.com/naskahsmkbu/?utm_source=ig_web_button_share_sheet">naskahsmkbu</a></p>
-                </div>
-                <div class="contact-item">
-                    <h3>Email</h3>
-                    <p><a href="mailto:btnaskah@gmail.com">btnaskah@gmail.com</a></p>
-                </div>
-            </div>
-        </section>
+    <!-- Form Komentar -->
+    <div class="comment-form">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <textarea id="comment" placeholder="Isi komentar..." required></textarea>
+        <button onclick="addComment()">Send</button>
+    </div>
 
-        <!-- Form Komentar -->
-        <div class="comment-form">
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <textarea id="comment" placeholder="Isi komentar..." style="font-family: 'arial'; font-size: 4rem" required></textarea>
-            <button onclick="addComment()">Send</button>
-        </div>
+    <!-- Daftar Komentar -->
+    <div class="comment-list" id="commentList">
+        <h3 style="color: #e5e5e5;">Komentar</h3>
+    </div>
 
-        <!-- Daftar Komentar -->
-        <div class="comment-list" id="commentList">
-            <h3 style="color: #e5e5e5;">Komentar</h3>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 NASKAH. All rights reserved.</p>
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
-    </footer>
-
-    <script src="./script.js"></script>
-    <script src="./tombolhamburger.js"></script>
-    <script src="./antimaling.js"></script>
-
-    <!-- Script komentar -->
     <script>
         function addComment() {
+            // Ambil nilai input
             const username = document.getElementById("username").value;
             const email = document.getElementById("email").value;
             const commentText = document.getElementById("comment").value;
 
+            // Validasi input kosong
             if (username === "" || email === "" || commentText === "") {
                 alert("Harap lengkapi semua kolom.");
                 return;
             }
 
+            // Buat elemen komentar baru
             const commentDiv = document.createElement("div");
             commentDiv.classList.add("comment");
 
@@ -177,8 +135,10 @@
             commentDiv.appendChild(userInfo);
             commentDiv.appendChild(commentContent);
 
+            // Tambahkan komentar ke daftar komentar
             document.getElementById("commentList").appendChild(commentDiv);
 
+            // Kosongkan form
             document.getElementById("username").value = "";
             document.getElementById("email").value = "";
             document.getElementById("comment").value = "";

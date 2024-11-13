@@ -59,6 +59,17 @@ nav ul li a:hover {
     animation: bounce 0.5s;
 }
 
+.menu-item {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.menu-item.active {
+    color: red;
+    text-decoration: underline;
+}
+
 /* Hamburger Menu Styles */
 .hamburger {
     display: none; /* Sembunyikan tombol hamburger di layar bsr */
