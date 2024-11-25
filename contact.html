@@ -146,7 +146,6 @@
     <!-- Footer -->
     <footer>
         <p>© 2024 NASKAH. All rights reserved.</p>
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </footer>
 
     <script src="./script.js"></script>
@@ -165,23 +164,30 @@
                 return;
             }
 
-            const commentDiv = document.createElement("div");
-            commentDiv.classList.add("comment");
+            const data = {
+                username: username,
+                email: email,
+                comment: commentText
+            };
 
-            const userInfo = document.createElement("h4");
-            userInfo.textContent = `${username} (${email})`;
-
-            const commentContent = document.createElement("p");
-            commentContent.textContent = commentText;
-
-            commentDiv.appendChild(userInfo);
-            commentDiv.appendChild(commentContent);
-
-            document.getElementById("commentList").appendChild(commentDiv);
-
-            document.getElementById("username").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("comment").value = "";
+            fetch("https://docs.google.com/spreadsheets/d/1ZfzkmR0LB-iyPjYCxN3GitBGNLMCyMGPdUgXgxdNgR8/edit?usp=sharing", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert("Komentar berhasil dikirim!");
+                document.getElementById("username").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("comment").value = "";
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("Terjadi kesalahan. Coba lagi.");
+            });
         }
     </script>
 </body>
