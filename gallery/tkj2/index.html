@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri TKJ 2</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link ke file CSS -->
+</head>
+<body>
+    <header>
+        <h1>Menu Galeri</h1>
+    </header>
+
+    <section class="galeri">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <a href="photo1.jpg" class="modal-trigger">
+                        <img src="photo1.jpg" alt="Foto 1">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="photo2.jpg" class="modal-trigger">
+                        <img src="photo2.jpg" alt="Foto 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="photo3.jpg" class="modal-trigger">
+                        <img src="photo3.jpg" alt="Foto 3">
+                    </a>
+                </div>
+                <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal untuk Gambar Besar -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <!-- Tombol LOL -->
+    <a href="https://wa.me/6281329287644?text=mau+upload+foto" class="lol-button">
+        UPLOAD FOTO
+    </a>
+
+    <script src="scripts.js"></script> <!-- Link ke file JS -->
+</body>
+</html>

@@ -11,6 +11,86 @@
     <link rel="stylesheet" href="../styleheader.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
+<style>
+    .galeri {
+    padding: 20px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Tombol LOL */
+.lol-button {
+    position: fixed;
+    bottom: 20px; /* Jarak dari bawah */
+    right: 20px; /* Jarak dari kanan */
+    padding: 10px 20px;
+    background-color: #ff5733; /* Warna tombol */
+    color: #fff;
+    text-decoration: none; /* Menghilangkan garis bawah default */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Transisi warna saat hover */
+}
+
+.lol-button:hover {
+    background-color: #c70039; 
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+}
+
+</style>
 <body>
     <header>
         <div class="logo">
@@ -30,7 +110,27 @@
         </nav>
     </header>
 
-
+    <section class="galeri">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <a href="photo1.jpg" class="modal-trigger">
+                        <img src="photo1.jpg" alt="Foto 1">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="photo2.jpg" class="modal-trigger">
+                        <img src="photo2.jpg" alt="Foto 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="photo3.jpg" class="modal-trigger">
+                        <img src="photo3.jpg" alt="Foto 3">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>© 2024 NASKAH. All rights reserved.</p>
