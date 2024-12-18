@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri TKJ 2</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link ke file CSS -->
+    <meta name="description" content="Gallery of classes with photos for each class group in NASKAH.">
+    <meta name="keywords" content="NASKAH, Gallery, Classes, Photos">
+    <meta name="author" content="NASKAH Team">
+    <title>NASKAH - Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <h1>Menu Galeri</h1>
+        <div class="logo">
+            <h1><img src="../logo/logo.png" alt="Naskah"></h1>
+        </div>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href=".../index.html">Home</a></li>
+                <li><a href=".../about.html">About Us</a></li>
+                <li><a href=".../gallery.html">Gallery</a></li>
+                <li><a href=".../members.html">Members</a></li>
+                <li><a href=".../contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="galeri">
@@ -29,22 +47,16 @@
                         <img src="photo3.jpg" alt="Foto 3">
                     </a>
                 </div>
-                <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
             </div>
         </div>
     </section>
 
-    <!-- Modal untuk Gambar Besar -->
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImg">
-    </div>
+    <footer>
+        <p>© 2024 NASKAH. All rights reserved.</p>
+    </footer>
 
-    <!-- Tombol LOL -->
-    <a href="https://wa.me/6281329287644?text=mau+upload+foto" class="lol-button">
-        UPLOAD FOTO
-    </a>
-
-    <script src="scripts.js"></script> <!-- Link ke file JS -->
+    <script src="./script.js"></script>
+    <script src="./tombolhamburger.js"></script>
+    <script src="./antimaling.js"></script>
 </body>
 </html>
